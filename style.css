@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #4b5492;
+}
+
+.container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Option buttons */
+.billing__options{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.billing__options input{
+    -webkit-appearance: none;
+    display: none;
+}
+
+.billing__options .label{
+    height: 50px;
+    width: 300px;
+    border: solid 2px var(--main-color);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+#year{
+    color: white;
+}
+
+.label small{
+    color: var(--main-color);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label .active{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+    background-color: var(--main-color);
+    height: 90%;
+    width: 45%;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+
+/* toggle class for javascript */
+
+.label.selected #year{
+    color: var(--main-color);
+}
+.label.selected #month{
+    color: white;
+}
+.label.selected .active{
+    left: 160px;
+}
+
+/* Price table */
+.subscription__options{
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 3rem;
+}
+
+.subscription{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: solid 1px var(--main-color);
+    transition: background 0.5s;
+}
+
+.subscription:hover{
+   background: #727483;
+}
+
+.subscription p{
+    margin: 5px 0 10px;
+    color: var(--main-color);
+    letter-spacing: 1px;
+}
+
+.subscription small{
+    color: #ccc;
+}
+
+.subscription .price{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.price.show__price{
+    display: none;
+}
+
+.subscription ul{
+    margin-bottom: 20px;
+}
+
+.subscription ul li{
+    list-style: none;
+    line-height: 25px;
+}
+
+.subscription button{
+    margin: 10px 10px 10px;
+    padding: 10px 10px;
+    background: none;
+    border: solid 1px var(--main-color);
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+
+}
+
+#starter h3{
+    color: #fcbf49;
+}
+#starter button{
+    background-color: #fcbf49;
+    color: white;
+    border:none;
+    transition: background 0.5s;
+}
+#starter button:hover{
+    background: #c09d94;
+}
+.subscription button:hover{
+    background: #ccc;
+}
+#growth h3{
+    color: #a2d2ff;
+    transition: background 0.5s;
+
+}
+#growth h3:hover{
+    background: #ccc;
+} 
+#growth button{
+    background-color: #a2d2ff;
+    color: white;
+    border:none;
+    transition: background 0.5s;
+
+}
+#growth button:hover{
+    background: #ccc;
+}
+#advanced h3{
+    color: #ee6c4d;
+    transition: background 0.5s;
+
+}
+#advanced h3:hover{
+    background: #524747;
+}
+#advanced button{
+    background-color: #ee6c4d;
+    color: white;
+    border:none;
+    transition: background 0.5s;
+
+}
+#advanced button:hover{
+    background: #524747;
+}
